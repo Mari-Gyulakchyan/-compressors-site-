@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Компрессоры</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <img src="logo.jpeg" alt="Логотип" class="logo">
+        <h1 class="main-usp">
+            Поставки винтовых компрессоров напрямую от завода-производителя.<br>
+            Лучшее соотношение “цена-качества” на российском рынке.
+        </h1>
+        <div class="advantages">
+            <div class="advantage">
+                <h3>Сервисные центры во всех городах РФ</h3>
+                <p>Запчасти всегда в наличии</p>
+            </div>
+            <div class="advantage">
+                <h3>Модернизированные блоки</h3>
+                <p>Собственного производства</p>
+            </div>
+            <div class="advantage">
+                <h3>Гарантия и доставка</h3>
+                <p>Гарантия от 12 мес, доставка от 1 дня</p>
+            </div>
+        </div>
+        <a href="#benefits" class="cta-button">подобрать компрессор за 5 минут</a>
+    </div>
+</section>
+<section class="benefits" id="benefits">
+    <div class="container">
+        <h2>У вас не будет проблем ни с обслуживанием, ни с ремонтом компрессора.</h2>
+        <p class="subheading">
+            Российское производство также означает оперативную поставку расходников и сменных запасных частей.
+        </p>
+        <div class="benefit-grid">
+            <div class="benefit-item" style="animation-delay: 1s;">
+                <h3>Без наценок от завода</h3>
+                <p>Официальный дилер завода "Арсенал Машиностроение". Продаем оборудование по заводской цене.</p>
+            </div>
+            <div class="benefit-item" style="animation-delay: 1.2s;">
+                <h3>Модернизированная комплектация</h3>
+                <p>Компрессоры работают при температурах от -40 до +40 °С и выдерживают высокую влажность и запыленность.</p>
+            </div>
+            <div class="benefit-item" style="animation-delay: 1.4s;">
+                <h3>Гарантия от 12 мес</h3>
+                <p>Многоступенчатый контроль качества комплектующих на заводе.</p>
+            </div>
+            <div class="benefit-item" style="animation-delay: 1.6s;">
+                <h3>Сервисы по РФ</h3>
+                <p>Обслуживание даже в полевых условиях благодаря наличию запчастей.</p>
+            </div>
+            <div class="benefit-item" style="animation-delay: 1.8s;">
+                <h3>Доставка по РФ</h3>
+                <p>От 1 до 14 дней до любой точки страны с организацией выгрузки при необходимости.</p>
+            </div>
+            <div class="benefit-item" style="animation-delay: 2s;">
+                <h3>Широкий модельный ряд</h3>
+                <p>Безмасляные, взрывозащищённые, поршневые и центробежные компрессоры, осушители, ресиверы и другие установки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Грамотный подбор оборудования сведет поломки и перерасход топлива к 0.</h2>
+        <p>Закажите бесплатный звонок нашего специалиста по подбору компрессорного оборудования</p>
+        <form action="#" method="post">
+            <label>
+                <input type="text" name="name" placeholder="Имя" required>
+            </label>
+            <label>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+            </label>
+            <button type="submit">Получить консультацию профессионала</button>
+        </form>
+    </div>
+</section>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(
+        '.hero .logo, .hero .main-usp, .hero .advantages, .hero .cta-button, ' +
+        '.benefits h2, .benefits .subheading, .benefit-item, ' +
+        '.contact h2, .contact p, .contact form'
+    ).forEach(item => {
+        observer.observe(item);
+    });
+</script>
+</body>
+</html>
